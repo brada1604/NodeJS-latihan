@@ -44,13 +44,49 @@
 // })
 // console.log(yargs.argv)
 
-const book = {
- title: 'Ego is the Enemy',
- author: 'Ryan Holiday'
-}
-// Covert JavaScript object into JSON string
-const bookJSON = JSON.stringify(book)
-// Covert JSON string into object
-const bookObject = JSON.parse(bookJSON)
-console.log(bookObject.title) // Print: Ego is the Enemy
-console.log(bookJSON) // Print: {"title":"Ego is the Enemy","author":"Ryan Holiday"}
+// const book = {
+//  title: 'Ego is the Enemy',
+//  author: 'Ryan Holiday'
+// }
+// // Covert JavaScript object into JSON string
+// const bookJSON = JSON.stringify(book)
+// // Covert JSON string into object
+// const bookObject = JSON.parse(bookJSON)
+// console.log(bookObject.title) // Print: Ego is the Enemy
+// console.log(bookJSON) // Print: {"title":"Ego is the Enemy","author":"Ryan Holiday"}
+
+
+// const squareAlt = (x) => x * x
+// console.log(squareAlt(2)) // Will print: 4
+
+
+// const event = {
+// 	name: 'Birthday Party',
+// 	guestList: ['Andrew', 'Jen', 'Mike'],
+// 	printGuestList() {
+// 		console.log('Guest list for ' + this.name)
+
+// 		this.guestList.forEach((guest) => {
+// 			console.log(guest + ' is attending ' + this.name)
+// 		})
+// 	}
+// }
+// event.printGuestList()
+
+
+const users = [{
+	name: 'Andrew Mead',
+	age: 27
+},{
+	name: 'George Hudson',
+	age: 72
+},{
+	name: 'Clay Klay',
+	age: 45
+}]
+const user1 = users.find((user1) => user1.name === 'Andrew Mead')
+const user2 = users.find((user2) => user2.name === 'George Hudson')
+const user3 = users.find((user3) => user3.name === 'Clay Klay')
+console.log(user1) // Will print the second object in the array
+console.log(user2) // Will print the second object in the array
+console.log(user3) // Will print the second object in the array
