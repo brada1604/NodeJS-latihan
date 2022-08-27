@@ -74,19 +74,38 @@
 // event.printGuestList()
 
 
-const users = [{
-	name: 'Andrew Mead',
-	age: 27
-},{
-	name: 'George Hudson',
-	age: 72
-},{
-	name: 'Clay Klay',
-	age: 45
-}]
-const user1 = users.find((user1) => user1.name === 'Andrew Mead')
-const user2 = users.find((user2) => user2.name === 'George Hudson')
-const user3 = users.find((user3) => user3.name === 'Clay Klay')
-console.log(user1) // Will print the second object in the array
-console.log(user2) // Will print the second object in the array
-console.log(user3) // Will print the second object in the array
+// const users = [{
+// 	name: 'Andrew Mead',
+// 	age: 27
+// },{
+// 	name: 'George Hudson',
+// 	age: 72
+// },{
+// 	name: 'Clay Klay',
+// 	age: 45
+// }]
+// const user1 = users.find((user1) => user1.name === 'Andrew Mead')
+// const user2 = users.find((user2) => user2.name === 'George Hudson')
+// const user3 = users.find((user3) => user3.name === 'Clay Klay')
+// console.log(user1) // Will print the second object in the array
+// console.log(user2) // Will print the second object in the array
+// console.log(user3) // Will print the second object in the array
+
+
+// console.log('Starting')
+// // Wait 2 seconds before running the function
+// setTimeout(() => {
+// 	console.log('2 Second Timer')
+// }, 2000)
+// console.log('Stopping')
+// 
+
+
+const request = require('request')
+const url = 'https://api.darksky.net/forecast/9d1465c6f3bb7a6c71944bdd8548d026/37.8267,-122.4233'
+request({ url: url }, (error, response) => {
+	// Parse the response body from JSON string into JavaScript object
+	const data = JSON.parse(response.body)
+	// Will print the current temperature to the console
+	console.log(data.currently.temperature)
+})
