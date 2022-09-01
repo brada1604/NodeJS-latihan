@@ -23,7 +23,7 @@ hbs.registerPartials(partialsPath);
 app.get("", (req, res) => {
     res.render("index", {
         title: "My title",
-        name: "Hafizh",
+        name: "Banu",
     });
 });
 
@@ -34,7 +34,7 @@ app.get("/weather", (req, res) => {
 app.get("*", (req, res) => {
     res.render("404", {
         title: "404",
-        name: "Hafizh Auliansyah",
+        name: "Bagus error",
         errorMessage: "Page not found.",
     });
 });
